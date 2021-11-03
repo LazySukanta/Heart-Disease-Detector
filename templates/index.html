@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Heart Disease Detection</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../static/styles/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header">
+      <div class="container flex flex-between">
+        <!-- Logo -->
+        <a href="#" class="logo flex">
+          <img
+            src="../static/images/logo.png"
+            alt="Website Logo"
+            id="header-img"
+          />
+        </a>
+        <!-- Navgations -->
+        <nav id="nav-bar" class="nav-bar">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#download" class="nav-link">About the Model </a>
+          <a href="{{ url_for('man') }}" class="nav-link">Predict </a>
+          <a href="#questions" class="nav-link">FAQs</a>
+          <a href="#contact" class="nav-link">contact</a>
+          <div class="close scale-effect">
+            <i class="fas fa-times"></i>
+          </div>
+        </nav>
+        <!-- Menu -->
+        <div class="toggle-menu scale-effect">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Landing Page Section -->
+    <section class="landing" id="home">
+      <div class="container">
+        <div class="landing-text">
+          <h1>A Simple Heart Disease Detector</h1>
+          <p>
+            During a heart health checkup, your doctor will talk to you about
+            how you’re feeling and offer you screening tests to assess your
+            cardiovascular health and risk factors. Your cardiovascular system
+            includes your heart and blood vessels. As part of the checkup,
+            they’ll look for any signs of heart disease and consider your risk
+            for developing heart disease in the future.
+          </p>
+          <div class="landing-buttons">
+            <a href="{{ url_for('man') }}" class="btn btn-primary"
+              >Check your heart's condition</a
+            >
+            <a href="" class="btn btn-secondary">Documentations</a>
+          </div>
+        </div>
+        <div class="landing-media">
+          <span class="media-loading-status">Loading...</span>
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/hCLbZiHACYI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Section -->
+    <!-- <section class="download" id="download">
+      <div class="container">
+        <div class="section-title">
+          <h1>Add the extension</h1>
+          <p>
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+        <div class="download-content">
+          <div class="extension">
+            <div class="extension-icon">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/220/220218.png"
+                alt="google chrome logo"
+              />
+            </div>
+            <div class="extension-title">
+              <h2>Add to Chrome</h2>
+              <p>Minimum version 62</p>
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+          <div class="extension">
+            <div class="extension-icon">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/732/732198.png"
+                alt="firefox logo"
+              />
+            </div>
+            <div class="extension-title">
+              <h2>Add to Firefox</h2>
+              <p>Minimum version 55</p>
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+          <div class="extension">
+            <div class="extension-icon">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/564/564442.png"
+                alt="safari logo"
+              />
+            </div>
+            <div class="extension-title">
+              <h2>Add to safari</h2>
+              <p>Minimum version 46</p>
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Questions Section -->
+    <section class="questions" id="questions">
+      <div class="container">
+        <div class="section-title">
+          <h1>Frequently Asked Questions</h1>
+          <!-- <p>
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p> -->
+        </div>
+        <div class="questions-content">
+          <div class="question">
+            <div class="question-header">
+              <h2>What Is Atherosclerosis?</h2>
+              <div class="icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="question-content">
+              <p>
+                Atherosclerosis is also called hardening of the arteries. When
+                the lining inside an artery is damaged, fat and plaque build up.
+                This causes the artery walls to thicken, and the blood vessel
+                narrows or sometimes gets blocked.
+              </p>
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-header">
+              <h2>What's the Link Between Smoking and Heart Disease?</h2>
+              <div class="icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="question-content">
+              <p>
+                About 30% of deaths from heart disease in the U.S. are directly
+                related to cigarette smoking. Smoking is a major cause of
+                atherosclerosis. Among other things, the nicotine in smoke
+                causes: Less oxygen to the heart, Higher blood pressure and
+                heart rate, More blood clotting, Damage to cells that line
+                coronary arteries and other blood vessels
+              </p>
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-header">
+              <h2>What Are the Risk Factors for Coronary Artery Disease?</h2>
+              <div class="icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="question-content">
+              <p>
+                There are some risk factors that you can't do anything about.
+                These include: &diams; Being male <br />
+                &diams; Being a woman who is past menopause <br />
+                &diams; Being older <br />
+                &diams; Having a family history of heart attack or coronary
+                artery disease.<br />
+              </p>
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-header">
+              <h2>What Is Cholesterol?</h2>
+              <div class="icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="question-content">
+              <p>
+                Cholesterol is a soft, waxy material made in the liver. It’s in
+                foods such as egg yolks, milk fat, organ meats, and shellfish.
+                You can lower your high cholesterol levels by eating foods low
+                in saturated fats, sugar, and calories<br />
+              </p>
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-header">
+              <h2>
+                What Should I Do If I Have Risk Factors for Coronary Artery
+                Disease?
+              </h2>
+              <div class="icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="question-content">
+              <p>
+                You can do several things to cut your chances of heart disease.
+                If your arteries are already clogged, you can slow the damage
+                with a healthier diet, exercise, quitting smoking, and reducing
+                stress. With lifestyle changes, you can stop or even reverse the
+                narrowing of arteries. While this is important for those with
+                risk factors for the disease, it is even more important if you
+                have had a heart attack or procedure to restore blood flow to
+                your heart or other areas of your body.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+      <div class="section-title">
+        <h1>Contact Us</h1>
+        <p>
+          You can contact us at any time we have well trained support team ready
+          at any time.
+        </p>
+      </div>
+      <div class="contact-content">
+        <div class="container">
+          <h3>Stay up-to-date with what we’re doing</h3>
+          <form action="" id="form" class="contact-form">
+            <input
+              type="email"
+              id="email"
+              class="email-input"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <input
+              type="submit"
+              id="submit"
+              class="submit-input"
+              value="Contact Us"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container flex flex-between flex-wrap">
+        <div class="quick-links">
+          <a href="#" class="logo">
+            <img src="../static/images/logo.png" alt="Website Logo" />
+          </a>
+          <!-- Navgations -->
+          <nav class="nav-bar">
+            <a href="#home" class="nav-link">home</a>
+            <a href="#questions" class="nav-link">FAQs</a>
+            <a href="#contact" class="nav-link">contact</a>
+          </nav>
+        </div>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-square fa-fw"></i></a>
+          <a href="#"><i class="fab fa-twitter-square fa-fw"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- partial -->
+    <script src="../static/scripts/script.js"></script>
+  </body>
+</html>

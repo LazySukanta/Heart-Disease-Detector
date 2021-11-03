@@ -1,0 +1,35 @@
+<html>
+<center>
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src= "static/cardio.gif"  width="1000px" height="500px">
+    </div>
+</div>
+</center>
+<body style="background-color:E29B92;">
+    
+        <center>
+        <div style="width:1000px;height:150px;margin:0px auto;">
+                  <div style="width:850px;height:150px;">
+                  <div style="text-align:center;font-size:50px;font-family:arial black;text-shadow:5px 5px dodgerblue;">
+                    HEART DISEASE PREDICTION
+                  </div>
+                  </div>
+				
+        </div>
+		</center>
+		<div id="page" class="container">
+	    <center>
+        {%if data==0%}
+        <h1>Heart disease is not present</h1>
+        {%else%}
+        <h1>Heart disease is present</h1>
+        {%endif%}
+
+        <a href="/">Go to home page</a>
+      </center>
+		     </div>
+
+
+</body>
+</html>
