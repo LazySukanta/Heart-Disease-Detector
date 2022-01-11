@@ -17,7 +17,7 @@
   --vf-transition: 0.2s; /* Very Fast Transition */
   --f-transition: 0.3s; /* Fast Transition */
   --m-transition: 0.4s; /* Medium Transition */
-  --s-transition: 0.5s; /* Slow Transition */
+  --s-transition: 0.5s; /* zSlow Transition */
   --section-padding: 60px;
 }
 html {
@@ -553,7 +553,7 @@ a.nav-link:hover {
 @media (max-width: 767px) {
   .footer .quick-links {
     flex-direction: column;
-    gap: 30px;
+    gap: 30px;  
   }
 }
 .footer .quick-links a img {
